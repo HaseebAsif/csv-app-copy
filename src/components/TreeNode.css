@@ -1,0 +1,80 @@
+.tree-node {
+  min-width: 200px;
+  max-width: 200px;
+  width: 100%;
+  padding: 5px 10px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+  margin-bottom: 25px;
+}
+
+.toggle-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 3px solid grey;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  height: 33px;
+}
+
+.tree-node__children {
+  position: relative;
+  left: 101%;
+}
+
+.connector {
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+  width: 2px;
+  height: 200%;
+  background-color: #ccc;
+  transform: translateY(-50%);
+  transition: width 0.3s;
+  top: 100%;
+}
+
+.tree-node:last-child > .connector {
+  height: 0%;
+}
+
+.connector-expanded {
+  width: calc(100% + 20px);
+}
+
+.toggle-icon {
+  font-size: 39px;
+  margin-right: 10px;
+  height: 63px;
+}
+
+.connector-horizontal {
+  position: absolute;
+  top: calc(50% - 1px);
+  left: -20px;
+  width: 20px;
+  height: 2px;
+  background-color: #ccc;
+  transition: width 0.3s;
+}
+
+.tree-node.expanded .connector-horizontal {
+  width: 2rem;
+}
+
+.connector-vertical {
+  position: absolute;
+  top: -10px;
+  left: -20px;
+  width: 2px;
+  height: calc(100% + 20px);
+  background-color: #ccc;
+  transition: height 0.3s;
+}
+
+.tree-node.expanded .connector-vertical {
+  height: calc(100% + 20px);
+}
