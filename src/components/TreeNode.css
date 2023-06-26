@@ -29,12 +29,12 @@
   position: absolute;
   bottom: 0;
   left: -20px;
-  width: 2px;
-  height: 200%;
+  width: 10px;
+  height: 90%;
   background-color: #ccc;
   transform: translateY(-50%);
   transition: width 0.3s;
-  top: 100%;
+  top: 45%;
 }
 
 .tree-node:last-child > .connector {
@@ -54,17 +54,22 @@
 .connector-horizontal {
   position: absolute;
   top: calc(50% - 1px);
-  left: -20px;
+  left: -35px;
   width: 20px;
   height: 2px;
   background-color: #ccc;
   transition: width 0.3s;
 }
-
+.connector-horizontalContainer {
+  position: relative;
+  height: 0;
+}
 .tree-node.expanded .connector-horizontal {
   width: 2rem;
 }
-
+.expandedConnector {
+  height: 125%;
+}
 .connector-vertical {
   position: absolute;
   top: -10px;

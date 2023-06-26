@@ -13,6 +13,7 @@ function App() {
           children: [
             { id: 3, name: "Node 1.1.1" },
             { id: 4, name: "Node 1.1.2" },
+            { id: 9, name: "Node 1.1.3" },
           ],
         },
         { id: 5, name: "Node 1.2" },
