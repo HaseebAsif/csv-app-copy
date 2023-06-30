@@ -5,6 +5,7 @@
   cursor: pointer;
   position: relative;
   transition: all 0.3s;
+  padding: 20px 0;
 }
 
 .toggle-button {
@@ -36,11 +37,11 @@
 }
 
 .tree-node-child:last-child > .tree-node.expanded ~ .connector {
-  height: 33%;
+  height: 34%;
   top: 0%;
 }
 .tree-node .tree-node-child:last-child > .connector {
-  height: 60%;
+  height: 63%;
   top: 20%;
 }
 
