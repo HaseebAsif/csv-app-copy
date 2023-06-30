@@ -2,11 +2,9 @@
   min-width: 200px;
   max-width: 200px;
   width: 100%;
-  padding: 5px 10px;
   cursor: pointer;
   position: relative;
   transition: all 0.3s;
-  margin-bottom: 25px;
 }
 
 .toggle-button {
@@ -29,16 +27,21 @@
   position: absolute;
   bottom: 0;
   left: -20px;
-  width: 10px;
-  height: 90%;
+  width: 2px;
+  height: 100%;
   background-color: #ccc;
   transform: translateY(-50%);
   transition: width 0.3s;
-  top: 45%;
+  top: 51%;
 }
 
-.tree-node:last-child > .connector {
-  height: 0%;
+.tree-node-child:last-child > .tree-node.expanded ~ .connector {
+  height: 33%;
+  top: 0%;
+}
+.tree-node .tree-node-child:last-child > .connector {
+  height: 60%;
+  top: 20%;
 }
 
 .connector-expanded {
@@ -82,4 +85,8 @@
 
 .tree-node.expanded .connector-vertical {
   height: calc(100% + 20px);
+}
+
+.tree-node-child {
+  position: relative;
 }

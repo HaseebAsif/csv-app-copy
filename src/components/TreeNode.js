@@ -8,9 +8,9 @@ function TreeNode({ node, onToggle, parentExpanded }) {
     setExpanded(!expanded);
     onToggle(node.id);
   }
-
+  console.log(expanded);
   return (
-    <div className={`tree-node ${expanded ? "expanded" : ""}`}>
+    <div className={`tree-node ${expanded && node.children ? "expanded" : ""}`}>
       <div onClick={handleToggle} className="toggle-button">
         {parentExpanded && (
           <div className="connector-horizontalContainer">
@@ -26,25 +26,15 @@ function TreeNode({ node, onToggle, parentExpanded }) {
       {expanded && node.children && (
         <div className="tree-node__children">
           {node.children.map((child) => (
-            <>
-              {" "}
+            <div key={child.id} className="tree-node-child">
               <TreeNode
-                key={child.id}
                 node={child}
                 onToggle={onToggle}
                 parentExpanded={parentExpanded || expanded}
               />
-              {parentExpanded ? (
-                <div
-                  style={{
-                    height: 37 * child?.children?.length + "%",
-                    top: 18 * child?.children?.length + "%",
-                  }}
-                />
-              ) : (
-                <div className={`connector`} />
-              )}
-            </>
+
+              <div className={`connector`} />
+            </div>
           ))}
         </div>
       )}
