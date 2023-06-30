@@ -57,18 +57,19 @@
 .connector-horizontal {
   position: absolute;
   top: calc(50% - 1px);
-  left: -35px;
+  right: 2px;
   width: 20px;
   height: 2px;
   background-color: #ccc;
   transition: width 0.3s;
+  z-index: -1;
 }
 .connector-horizontalContainer {
   position: relative;
   height: 0;
 }
 .tree-node.expanded .connector-horizontal {
-  width: 2rem;
+  width: 1.25rem;
 }
 .expandedConnector {
   height: 125%;
