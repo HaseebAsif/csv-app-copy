@@ -1,7 +1,8 @@
 import "./App.css";
-
 import Tree from "./components/Tree";
+
 function App() {
+  // Data: Array of objects
   const treeData = [
     {
       id: 1,
@@ -29,8 +30,10 @@ function App() {
     },
   ];
   return (
+    //jsx
     <div className="app">
       <h1>CSV App - Tree Opener</h1>
+      {/* Child Component, Here we sent the data from parent to child using props */}
       <Tree data={treeData} />
     </div>
   );
